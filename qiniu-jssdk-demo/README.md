@@ -4,7 +4,7 @@
 
  ```
 	$ git@github.com:qiniuts/dockerfiles.git
- 	$ cd qiniu-jssdk-demo
+	$ cd qiniu-jssdk-demo
  ```
  
  * edit the config.js file
@@ -27,8 +27,16 @@ $ docker build . -t jssdk
 
 * run by the builded image
 ```
-$ docker run  -it --rm -p 80:80 jssdk
+$ docker run  -dit --rm -p 80:80 jssdk
+15fce65cf0346f78c3fcb24c1dd3db23fdbfd9909760ee55a7f81f500ab2d457     
 ```
+
+* attach the container by the id
+```
+docker exec -i -t 15fce65cf0346f78c3fcb24c1dd3db23fdbfd9909760ee55a7f81f500ab2d457 /bin/bash
+```
+Then you can modify the code, and test the result by following addresses
+
 
 * access the demo by address 
 ```
